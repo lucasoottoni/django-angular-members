@@ -1,0 +1,19 @@
+<h1>Members</h1>
+<table class="alt">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>surname</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let member of members" (click)="memberClicked(member)">
+      <td>{{member.id}}</td>
+      <td>{{member.name}}</td>
+      <td>{{member.surname}}</td>
+    </tr>
+  </tbody>
+  
+</table>
+<router-outlet></router-outlet>

@@ -1,0 +1,19 @@
+<h3>Member detail</h3>
+Editando membro: {{selected_member.name}}
+
+
+<span class="image left">
+    <img src="{{selected_member.image}}" alt="">
+</span>
+
+<input type="file" (change)="onFileSelected($event)">
+<input type="text" [(ngModel)]="selected_member.id" readonly>
+<input type="text" [(ngModel)]="selected_member.name">
+<input type="text" [(ngModel)]="selected_member.surname">
+<button (click)="update()" class="button primary">Update member</button>
+<button (click)="delete()" class="button primary">Delete member</button>
+
+
+
+
+<button (click)="newMember()" class="button primary">Novo</button>
